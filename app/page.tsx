@@ -1,53 +1,102 @@
 'use client'
-  
-  import { Button } from '@/components/ui/button'
-  import { Card, CardHeader, CardTitle, CardContent } from '@/components/ui/card'
-  
-  export default function Home() {
+import { Button } from '@/components/ui/button'
+import { Card, CardHeader, CardTitle, CardContent } from '@/components/ui/card'
+import { Badge } from '@/components/ui/badge'
+import { ArrowRight, Code, Palette, Wand2 } from 'lucide-react'
+export default function Home() {
   return (
-    <main className="flex min-h-screen flex-col items-center justify-center p-24">
-      <div className="z-10 max-w-5xl w-full items-center justify-between text-center">
-        <h1 className="scroll-m-20 text-4xl font-extrabold tracking-tight lg:text-5xl mb-4">
-          Welcome to Your New Website!
-        </h1>
-        <p className="text-xl text-muted-foreground mb-12">
-          This is just a sample page to get you started.
-        </p>
-      </div>
-
-      <div className="relative flex place-items-center my-16">
-        <div className="text-center max-w-2xl">
-          <h2 className="scroll-m-20 border-b pb-2 text-3xl font-semibold tracking-tight first:mt-0 bg-clip-text text-transparent bg-gradient-to-r from-pink-500 to-violet-500 mb-6">
-            Ready to Create Your Own Website?
-          </h2>
-          <p className="leading-7 [&:not(:first-child)]:mt-4 mb-4">
-            It's easy! Just start chatting with our AI assistant below.
+    <main className="min-h-screen bg-gradient-to-b from-background to-muted/20">
+      {/* Hero Section */}
+      <div className="container mx-auto px-4 pt-32 pb-16">
+        <div className="text-center space-y-4">
+          <Badge className="mb-4" variant="secondary">✨ Welcome to the Future of Web Development</Badge>
+          <h1 className="scroll-m-20 text-5xl font-extrabold tracking-tight lg:text-6xl bg-gradient-to-r from-primary to-primary-foreground bg-clip-text text-transparent animate-fade-in">
+            Build Your Dream Website
+          </h1>
+          <p className="text-xl text-muted-foreground max-w-[700px] mx-auto">
+            Create professional websites instantly with AI-powered assistance. No coding required.
           </p>
-          <p className="leading-7 [&:not(:first-child)]:mt-4 mb-8">
-            Tell it what kind of website you want, and it will help you build it - no technical knowledge required!
-          </p>
+          <div className="flex justify-center gap-4 pt-8">
+            <Button size="lg" className="gap-2">
+              Get Started <ArrowRight className="h-4 w-4" />
+            </Button>
+            <Button size="lg" variant="outline">
+              Learn More
+            </Button>
+          </div>
         </div>
       </div>
-
-      <div className="mb-32 text-center max-w-2xl">
-        <Card>
-          <CardHeader>
-            <CardTitle>How to Begin</CardTitle>
+      {/* Features Section */}
+      <div className="container mx-auto px-4 py-24">
+        <div className="grid md:grid-cols-3 gap-8">
+          <Card className="border-none shadow-lg hover:shadow-xl transition-shadow">
+            <CardHeader>
+              <Wand2 className="h-12 w-12 text-primary mb-4" />
+              <CardTitle>AI-Powered Creation</CardTitle>
+            </CardHeader>
+            <CardContent>
+              <p className="text-muted-foreground">
+                Simply describe what you want, and watch as AI transforms your ideas into reality.
+              </p>
+            </CardContent>
+          </Card>
+          <Card className="border-none shadow-lg hover:shadow-xl transition-shadow">
+            <CardHeader>
+              <Code className="h-12 w-12 text-primary mb-4" />
+              <CardTitle>No Code Required</CardTitle>
+            </CardHeader>
+            <CardContent>
+              <p className="text-muted-foreground">
+                Focus on your vision while our AI handles all the technical details.
+              </p>
+            </CardContent>
+          </Card>
+          <Card className="border-none shadow-lg hover:shadow-xl transition-shadow">
+            <CardHeader>
+              <Palette className="h-12 w-12 text-primary mb-4" />
+              <CardTitle>Professional Design</CardTitle>
+            </CardHeader>
+            <CardContent>
+              <p className="text-muted-foreground">
+                Get beautiful, responsive designs that look great on all devices.
+              </p>
+            </CardContent>
+          </Card>
+        </div>
+      </div>
+      {/* How It Works Section */}
+      <div className="container mx-auto px-4 py-16">
+        <Card className="border-none shadow-xl bg-gradient-to-r from-primary/5 to-primary/10">
+          <CardHeader className="text-center">
+            <CardTitle className="text-3xl">How to Begin</CardTitle>
           </CardHeader>
           <CardContent>
-            <ol className="my-6 ml-6 list-decimal [&>li]:mt-2">
-              <li>Look for the chat box at the bottom of your screen</li>
-              <li>Type what you want your website to be about</li>
-              <li>The AI will guide you through creating your perfect website</li>
-            </ol>
-            <p className="text-sm text-muted-foreground mt-6">
-              Don't worry about technical details - our AI assistant will handle everything for you!
-            </p>
+            <div className="grid md:grid-cols-3 gap-8 text-center">
+              <div className="space-y-2">
+                <div className="text-4xl font-bold text-primary">1</div>
+                <h3 className="font-semibold">Open Chat</h3>
+                <p className="text-sm text-muted-foreground">
+                  Look for the chat interface at the bottom of your screen
+                </p>
+              </div>
+              <div className="space-y-2">
+                <div className="text-4xl font-bold text-primary">2</div>
+                <h3 className="font-semibold">Describe Your Vision</h3>
+                <p className="text-sm text-muted-foreground">
+                  Tell us what kind of website you want to create
+                </p>
+              </div>
+              <div className="space-y-2">
+                <div className="text-4xl font-bold text-primary">3</div>
+                <h3 className="font-semibold">Watch it Come to Life</h3>
+                <p className="text-sm text-muted-foreground">
+                  See your website take shape in real-time with AI guidance
+                </p>
+              </div>
+            </div>
           </CardContent>
         </Card>
       </div>
     </main>
-
-
   )
-  }
+}
