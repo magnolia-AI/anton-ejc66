@@ -11,7 +11,7 @@ export default function Home() {
             Your Vision Starts Here
           </h1>
           <p className="mt-6 text-xl text-muted-foreground max-w-[600px] mx-auto">
-            Transform this template into your perfect website using the chat interface below.
+            Transform this template into your perfect website using the chat interface.
           </p>
           <div className="mt-12 flex gap-4 justify-center">
             <Button size="lg" className="px-8">Primary Action</Button>
